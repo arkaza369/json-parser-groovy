@@ -1,43 +1,43 @@
 static void main(String[] args) {
   def customers = [
-          [
-                  "customer-id": 123,
-                  name: "John Doe",
-                  address: [
-                          street: "123 Main St",
-                          city: "Anytown",
-                          state: "CA",
-                          zip: "12345"
-                  ],
-                  orders: [
-                          [
-                                  "order-id": 1001,
-                                  items: [
-                                          ["product-id": "ABC123", quantity: 2],
-                                          ["product-id": "DEF456", quantity: 1]
-                                  ],
-                                  total: 25.99
-                          ],
-                          [
-                                  "order-id": 1002,
-                                  items: [
-                                          ["product-id": "GHI789", quantity: 1]
-                                  ],
-                                  total: 10.00
-                          ]
-                  ]
+      [
+          "customer-id": 123,
+          name: "John Doe",
+          address: [
+              street: "123 Main St",
+              city: "Anytown",
+              state: "CA",
+              zip: "12345"
           ],
-          [
-                  "customer-id": 456,
-                  name: "Jane Smith",
-                  address: [
-                          street: "456 Elm St",
-                          city: "Anytown",
-                          state: "NY",
-                          zip: "54321"
+          orders: [
+              [
+                  "order-id": 1001,
+                  items: [
+                      ["product-id": "ABC123", quantity: 2],
+                      ["product-id": "DEF456", quantity: 1]
                   ],
-                  orders: []
+                  total: 25.99
+              ],
+              [
+                  "order-id": 1002,
+                  items: [
+                      ["product-id": "GHI789", quantity: 1]
+                  ],
+                  total: 10.00
+              ]
           ]
+      ],
+      [
+          "customer-id": 456,
+          name: "Jane Smith",
+          address: [
+              street: "456 Elm St",
+              city: "Anytown",
+              state: "NY",
+              zip: "54321"
+          ],
+          orders: []
+      ]
   ]
 
   def transformedData = customers.collect { customer ->
